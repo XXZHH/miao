@@ -11,15 +11,18 @@
     body>p:first-child{
       color: red;
     }
+    [tabindex]:focus{
+          color: blue;
+          }
 
     [tabindex]:hover{
           color: red;
       }
+
+
+
     [tabindex]:active{
           color: green;
-        }
-    [tabindex]:focus{
-          color: blue;
           }
 
     p.a.c{
@@ -76,26 +79,37 @@
 
 
 
-    div.b > ul > li:nth-child(-n+65){
+    div:nth-of-type(3) > ul > li:nth-child(-n+65){
         color: green;
       }
 
-    div.b > ul > li:nth-child(-n+50):nth-child(n+35){
+    div:nth-of-type(3) > ul > li:nth-child(-n+50):nth-child(n+35){
         color: blue;
       }
 
-    div.b > ul > li:nth-child(-n+25){
+    div:nth-of-type(3) > ul > li:nth-child(-n+25){
         color: red;
       }
 
-    div.b:last-child> ul > li:nth-child(odd){
+    div.b:last-child> ul > li{
+      color:blue;
+    }
+
+    div.b:last-child> ul > li:nth-child(2n+4){
       color: red;
-
     }
-    div.b:last-child > ul > li:nth-child(even){
-      color: yellow;
-
+    div.b:last-child> ul > li:nth-child(3n+6){
+      color: red;
     }
+    div.b:last-child> ul > li:nth-child(5n+10){
+      color: red;
+    }
+    div.b:last-child> ul > li:nth-child(7n+14){
+      color: red;
+    }
+
+
+
 
 
 
@@ -277,7 +291,7 @@
     <hr>
 
     <div class="b">
-      <p>让所有的质数（2，3，4，7，11，13……）跟合数（4，6，8，9，10……）为不同的颜色</p>
+      <p>让所有的质数（2，3，5，7，11，13……）跟合数（4，6，8，9，10……）为不同的颜色</p>
       <ul>
         <li>01</li>
         <li>02</li>
