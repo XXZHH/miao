@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>twitter-heart</title>
+</head>
+<style>
+  * {
+    background-color: rgba(0,0,0,0.08);
+  }
+  .wrap {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+
+  }
+  img:active{
+    margin-right:-2800px;
+    transition: none;
+    left:0;
+  }
+  img {
+    position: absolute;
+    right:0;
+    transition: 1s steps(28,start);
+  }
+
+</style>
+<body>
+  <div class="wrap">
+    <img src="https://abs.twimg.com/a/1542244373/img/animations/web_heart_animation_edge.png?tdsourcetag=s_pctim_aiomsg" alt="">
+  </div>
+
+</body>
+</html>
