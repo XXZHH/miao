@@ -10,14 +10,14 @@
   * {
     background-color: rgba(0,0,0,0.08);
   }
-  .wrap {
+  label {
     width: 100px;
     height: 100px;
     overflow: hidden;
     position: absolute;
 
   }
-  img:active{
+  input:checked + label img{
     margin-right:-2800px;
     transition: none;
     left:0;
@@ -30,9 +30,10 @@
 
 </style>
 <body>
-  <div class="wrap">
+  <input type="checkbox" id="box" name="" value="" hidden>
+  <label for="box">
     <img src="https://abs.twimg.com/a/1542244373/img/animations/web_heart_animation_edge.png?tdsourcetag=s_pctim_aiomsg" alt="">
-  </div>
+  </label>
 
 </body>
 </html>

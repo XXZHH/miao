@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>radio-slider</title>
+</head>
+<style>
+  * {
+    background-color: rgba(0,0,0,0.08);
+  }
+  div {
+    width: 960px;
+    height:540;
+    position: absolute;
+    overflow:hidden;
+  }
+  img {
+    width: 100%;
+    position: absolute;
+    left:100%;
+    top: 20px;
+    transition: left 1s;
+
+  }
+  input[type="radio"]:checked + img {
+    display:block;
+    left:0;
+    transition: left 1s;
+
+  }
+</style>
+<body>
+  <div class="wrap">
+    <input type="radio" name="P" id="">
+    <img for="" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542809965639&di=d6a2cd75b8c97b02c9f80bbfabab3aef&imgtype=0&src=http%3A%2F%2Fd.app.huan.tv%2Fappstore%2Fresources%2F2015%2F03%2F13%2F2021c354d97b47cc863ee300bf2578d0%2F1_1426214450495.jpg" alt="">
+    <input type="radio" name="P" id="">
+    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1680324675,3176952251&fm=26&gp=0.jpg"  alt="">
+    <input type="radio" name="P" id="">
+    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3209371950,1022878784&fm=11&gp=0.jpg" alt="">
+    <input type="radio" name="P" id="">
+    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2318028802,2428647808&fm=26&gp=0.jpg" alt="">
+    <input type="radio" name="P" id="">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543404834&di=1c46661c14b66e870db5071a4bf4e5ff&imgtype=jpg&er=1&src=http%3A%2F%2Fimgs.aixifan.com%2Flive%2F1501936360511%2F1501936360511.png" alt="">
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ios-checkbox</title>
+</head>
+<style>
+  * {
+    background-color: rgba(0,0,0,0.08);
+    box-sizing:border-box;
+  }
+  label {
+    display: block;
+    width: 350;
+    height: 350px;
+    position: absolute;
+  }
+  .elipse {
+     width: 350px;
+     height: 200px;
+     border-radius: 100px;
+     background-color: #dddddd;
+     box-shadow: 1px 1px 20px ;
+     border: 1px solid #bdbdbd;
+     position: absolute;
+     transition: 1s;
+     border:0px solid #bdbdbd;
+  }
+  .circle {
+     width: 170px;
+     height: 170px;
+     border-radius: 85px;
+     background-color: #ffffff;
+     box-shadow: 1px 1px 10px ;
+     border: 1px solid #bdbdbd;
+     position: absolute;
+     left: 15px;
+     top: 15px;
+     transition: 1s cubic-bezier(.56,-0.8,.46,1.72) ;
+  }
+
+  input:checked + label .circle{
+      left: 170px;
+      transition: 1s cubic-bezier(.56,-0.8,.46,1.72);
+  }
+  input:checked + label .elipse{
+       background-color: #6EDD5E;
+       border: 100px solid #6EDD5E;
+       transition: 0.5s;
+
+  }
+    .circle:hover{
+      width: 190px;
+      height: 170px;
+      border-radius: 85px;
+      transition: 0.6s cubic-bezier(.56,-0.8,.46,1.72);
+    }
+</style>
+<body>
+  <div class="wrap">
+    <input type="checkbox" id="box" hidden>
+    <label for="box">
+      <div class="elipse"></div>
+      <div class="circle"></div>
+    </label>
+  </div>
+</body>
+</html>
