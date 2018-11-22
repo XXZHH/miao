@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style media="screen">
+* {
+xbackground-color: rgba(0,0,0,0.08);
+
+}
+div {
+display:inline-block;
+background-color: #aaa;
+
+}
+ul {
+list-style: none;
+padding: 0;
+display: inline-block;
+background-color: #ddd;
+}
+ul li {
+position: relative;
+white-space: nowrap;
+padding-right: 10px;
+
+}
+ul ul {
+xdisplay:none;
+position: absolute;
+top: 100%;
+left:0;
+}
+ul ul ul {
+position: absolute ;
+top: 0%;
+left:100%;
+}
+li:hover > ul > li{
+display: block;
+
+}
+li:hover {
+background-color: #777777;
+position: relative;
+top: -2px;
+}
+ul ul ul:before {
+content:'>';
+position: absolute;
+right: 100%;
+}
+ul ul li {
+display:none;
+
+}
+
+</style>
+<body>
+  <div class="wrap">
+    <div>
+      <ul>
+        <li>文件
+          <ul>
+            <li>新建文件</li>
+            <li>打开文件</li>
+            <li>最近打开的文件</li>
+            <li>退出</li>
+      </ul>
+    </div>
+        <div>
+      <ul>
+        <li>编辑
+          <ul>
+            <li>撤销</li>
+            <li>重复</li>
+            <li>行
+               <ul>
+                 <li>添加缩进</li>
+                 <li>减少缩进</li>
+                 <li>自动缩进</li>
+               </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>查看
+          <ul>
+            <li>切换全屏</li>
+            <li>切换菜单</li>
+            <li>开发
+               <ul>
+                 <li>以开发者模式打开</li>
+               </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+      <div>
+      <ul>
+        <li>选择
+          <ul>
+            <li>扩大范围</li>
+            <li>缩小范围</li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+      <div>
+      <ul>
+        <li>1
+          <ul>
+            <li>11</li>
+            <li>12</li>
+            <li>13
+               <ul>
+                 <li>131
+                   <ul>
+                     <li>1311</li>
+                     <li>1312</li>
+                     <li>1313
+                       <ul>
+                         <li>13131</li>
+                         <li>13132
+                           <ul>
+                             <li>131321</li>
+                             <li>131322</li>
+                             <li>131323</li>
+                           </ul>
+                         </li>
+                         <li>13133</li>
+                       </ul>
+                     </li>
+                   </ul>
+                 </li>
+                 <li>132</li>
+                 <li>133</li>
+               </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+
+</body>
+</html>

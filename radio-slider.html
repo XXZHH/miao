@@ -4,46 +4,174 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>radio-slider</title>
+  <title>Document</title>
 </head>
 <style>
   * {
-    background-color: rgba(0,0,0,0.08);
+    xbackground-color: rgba(0,0,0,0.08);
+    box-sizing: border-box;
   }
-  div {
-    width: 960px;
-    height:540;
-    position: absolute;
-    overflow:hidden;
+  html,body {
+    background-color: #dddddd;
+    position:absolute;
   }
-  img {
-    width: 100%;
+  .wrap {
     position: absolute;
-    left:100%;
-    top: 20px;
+    left: 100;
+    top: 100;
+    width: 300px;
+    height: 420px;
+    border-top: 1px solid #FFC861;
+    text-align: center;
+    background-color: #fff;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  h3 {
+    color: #FFAC13;
+    margin-top: 50px;
+  }
+  .name {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+  .abs {
+    margin: 50px;
+    margin-top: -10px;
+    font-size: 12px;
+    color: #B0B0B0;
+  }
+  h4 {
+    margin-top: -30px;
+  }
+  .p {
+    margin: auto;
+    width: 220px;
+    height: 160px;
+  }
+  .box {
+    opacity: 0;
+    xdisplay:none;
+    position:absolute;
+    transition:  1s;
+    left: 100%;
+  }
+  input {
+    display:none;
+  }
+  .xxx {
+    margin: 50px auto;
+    margin-top: -20px;
+    border: 3px solid;
+    width: 120px;
+    font-size: 14px;
+    color: #ffac13;
+  }
+  .xxx:hover {
+    color: white;
+    background-color: #ffac13;
+    transition: 0.5s;
+  }
+
+  input:checked + * + * + div {
+    xdisplay:block;
+    opacity: 1;
     transition: left 1s;
+    left: 0;
+
 
   }
-  input[type="radio"]:checked + img {
-    display:block;
-    left:0;
-    transition: left 1s;
+
+  section {
+    position:absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+  }
+  label {
+    display: inline-block;
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+    margin: 20px;
+    xbox-shadow: 0 0 10px ;
+    background-color: #b0b0b0;
+    xborder: 3px solid ;
+  }
+  .wrap:hover {
+    margin-top: -5px;
+    box-shadow: 0 0 40px ;
+    transition: 0.5s;
+  }
+  label:hover {
+    background-color: #FF6700;
+  }
+  .ll {
+    position:absolute;
+    left: 0;
+    top: 100px;
+    width: 50px;
+    height: 20px;
+    opacity: 0.5;
+
 
   }
+  .lr {
+    position:absolute;
+    right: 0;
+    top: 100px;
+    width: 50px;
+    height: 20px;
+    opacity: 0.5;
+  }
+
+
+
+
+
 </style>
 <body>
   <div class="wrap">
-    <input type="radio" name="P" id="">
-    <img for="" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542809965639&di=d6a2cd75b8c97b02c9f80bbfabab3aef&imgtype=0&src=http%3A%2F%2Fd.app.huan.tv%2Fappstore%2Fresources%2F2015%2F03%2F13%2F2021c354d97b47cc863ee300bf2578d0%2F1_1426214450495.jpg" alt="">
-    <input type="radio" name="P" id="">
-    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1680324675,3176952251&fm=26&gp=0.jpg"  alt="">
-    <input type="radio" name="P" id="">
-    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3209371950,1022878784&fm=11&gp=0.jpg" alt="">
-    <input type="radio" name="P" id="">
-    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2318028802,2428647808&fm=26&gp=0.jpg" alt="">
-    <input type="radio" name="P" id="">
-    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543404834&di=1c46661c14b66e870db5071a4bf4e5ff&imgtype=jpg&er=1&src=http%3A%2F%2Fimgs.aixifan.com%2Flive%2F1501936360511%2F1501936360511.png" alt="">
+    <h3>图书</h3>
+    <input type="radio" name="A" id="a1" value="" checked>
+    <input type="radio" name="A" id="a2" value="">
+    <input type="radio" name="A" id="a3" value="">
+    <div class="box">
+      <label class="ll" for="a3">&lt;</label>
+      <label class="lr" for="a2">&gt;</label>
+      <p class="name">哈利·波特与被诅咒的孩子</p>
+      <p class="abs">“哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！ </p>
+      <h4>29.37元</h4>
+      <div class="p">
+        <img src="https://i1.mifile.cn/a4/5e5da924-84e3-4959-9e25-5891cdf30757" alt="">
+      </div>
+    </div>
+    <div class="box">
+      <label class="ll" for="a1">&lt;</label>
+      <label class="lr" for="a3">&gt;</label>
+      <p class="name">好吗好的</p>
+      <p class="abs">“畅销作家大冰2016年新书！讲给你听，好吗好的！ </p>
+      <h4>17.99元</h4>
+      <div class="p">
+        <img src="https://i1.mifile.cn/a4/61e1385e-54de-48f3-8717-5e4f4b1cdd14" alt="">
+      </div>
+    </div>
+    <div class="box">
+      <label class="ll" for="a2">&lt;</label>
+      <label class="lr" for="a1">&gt;</label
+      <p class="name"></p>
+      <p class="abs">海量好书，享受精品阅读时光漂亮的中文排版，千万读者选择！</p>
+      <div class="xxx">前往多看阅读</div>
+      <h4></h4>
+      <div class="p">
+        <img src="https://s01.mifile.cn/i/index/more-duokan.jpg" alt="">
+      </div>
+    </div>
+    <section>
+      <label id="f1" for="a1"></label>
+      <label for="a2"></label>
+      <label for="a3"></label>
+    </section>
   </div>
-
 </body>
 </html>
