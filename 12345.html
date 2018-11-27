@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    xbackground-color: rgba(0,0,0,0.05);
+  }
+  html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0 ;
+
+  }
+  .head {
+    width: 100%;
+    height: 40px;
+    background-color: #333333;
+
+  }
+  .head .nav-top {
+    width: 1228px;
+    height: 100%;
+    margin: 0 auto;
+
+  }
+  .head .nav-top .name{
+    color: #b0b0b0;
+    line-height: 40px;
+    float: left;
+    font-size: 12px;
+  }
+  .head .nav-top .name span {
+      padding: 5px
+  }
+  .head .nav-top .name span:hover {
+    color: #ffffff;
+  }
+  .head .nav-top .cart {
+    float: right;
+    line-height: 40px;
+    width: 122px;
+    height: 40px;
+    background-color: #424242;
+    color: #b0b0b0;
+    font-size: 13px;
+    text-align: center;
+  }
+  .head .nav-top .cart:hover {
+    background-color: #ffffff;
+    color: #FF6700;
+  }
+  .head .nav-top .cart .cart-m {
+    width: 316px;
+    height: 0px;
+    background-color: #fff;
+    position: relative;
+    left:-194px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px black;
+    line-height: 100px;
+    overflow: hidden;
+    color: #000000;
+
+  }
+  .head .nav-top .cart:hover>.cart-m {
+    height: 100px;
+    transition: 0.5s;
+    overflow: hidden;
+
+
+  }
+  .head .nav-top .login {
+    float: right;
+    color: #b0b0b0;
+    line-height: 40px;
+    font-size: 12px;
+    margin-right: 20px;
+  }
+  .head .nav-top .login span {
+    padding: 5px;
+  }
+  .head .nav-top .login span:hover {
+    color: #ffffff;
+  }
+
+
+
+  .main {
+    width: 1228px;
+    height: 1370px;
+    margin: auto;
+    background-color: #ffffff;
+  }
+  .main .nav {
+    width: 1228px;
+    height: 52px;
+    margin: auto;
+    margin-top: 25px;
+  }
+  .main .nav .logo {
+    display: inline-block;
+    float: left;
+  }
+  .main .nav .topnav {
+    display: inline-block;
+    line-height: 52px;
+    margin-left: 180px;
+    position: absolute;
+  }
+  .main .nav .topnav span {
+    padding: 10px;
+  }
+  .main .nav .topnav span:hover {
+    color: #FF6700;
+  }
+  .main .nav .search {
+    dispaly: inline-block;
+    float: right;
+    line-height: 52px;
+
+
+  }
+  #a {
+    width:147px;
+    height:52px;
+    background-color: #fff;
+
+  }
+  #b {
+    width: 52px;
+    height: 52px;
+    background-color: #fff;
+  }
+  #b:hover {
+    background-color: #FF6700;
+    transition: 0.5s;
+    color: white;
+  }
+
+  .main .center {
+    width: 1228px ;
+    height: 460px;
+    margin-top: 25px;
+    position: absolute;
+  }
+  .main .center .scroll {
+    width: 100%;
+    height: 460px;
+  }
+  .main .center .scroll div {
+    position: absolute;
+    width: 1228px;
+    height: 460px;
+    margin: auto;
+    opacity: 0;
+    transition: 2s;
+  }
+  .main .center .scroll div img{
+    position: absolute;
+    width: 1228px;
+    height: 460px;
+    margin: auto;
+
+
+  }
+  .main .center .scroll input {
+    display: none;
+  }
+  .main .center .scroll input:checked + * + * + * + * + div {
+    opacity: 1;
+    transition: 2s;
+  }
+  .main .center .scroll section {
+    width: 130px;
+    height: 20px;
+    position: relative;
+    left: 1100px;
+    top: 400px;
+
+  }
+  .main .center .scroll section label {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #B4968F;
+    margin: 5px;
+    background-color: #92675e;
+  }
+  .main .center .scroll section label:hover {
+    background-color: #F8CDC4;
+    border: 2px solid #957A75;
+  }
+  .main .center .scroll input:nth-child(1):checked ~ section > label:nth-child(1),
+  .main .center .scroll input:nth-child(2):checked ~ section > label:nth-child(2),
+  .main .center .scroll input:nth-child(3):checked ~ section > label:nth-child(3),
+  .main .center .scroll input:nth-child(4):checked ~ section > label:nth-child(4),
+  .main .center .scroll input:nth-child(5):checked ~ section > label:nth-child(5) {
+    background-color: #F8CDC4;
+    border: 2px solid #957A75;
+  }
+  .main .center .scroll div .ll {
+    position: absolute;
+    left: 58.5px;
+    top: 45px;
+    zoom: 4;
+    z-index: 2;
+    color: #777777;
+  }
+  .main .center .scroll div .lr {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    zoom: 4;
+    z-index: 2;
+    color: #777777;
+  }
+  .main .center .scroll div label:hover {
+    background-color: #782d41;
+    color: #ffffff;
+    opacity: 0.5;
+  }
+    .main .center .sidebar {
+      width: 234px;
+      height: 460px;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top: 0;
+      color: #ffffff;
+
+    }
+    .main .center .sidebar ul li {
+      font-size: 14px;
+      margin-left: -40px;
+      padding: 12px;
+      list-style-type: none;
+      text-align: center;
+    }
+    .main .center .sidebar ul li:hover {
+      background-color: #FF6700;
+    }
+    .main .center .sidebar ul ul {
+      width: auto;
+      height: 100%;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      background-color: #ffffff;
+      display: none;
+    }
+    .main .center .sidebar ul li:hover ul  {
+      display: block;
+      z-index: 2;
+    }
+    .main .center .sidebar ul li ul li:hover  {
+      background-color: #fff;
+      color: #ff6700;
+    }
+    .main .center .sidebar ul ul li {
+      white-space:nowrap;
+      color: #000000;
+      float: laft;
+      margin-top: 20px;
+    }
+    .main .center .sidebar> ul > li:after {
+        content: '>';
+        position: relative;
+        color: #ADACB1;
+        float: right;
+    }
+
+    .main .center .tools {
+      width: 1228px;
+      height: 170px;
+      margin-top: 15px;
+    }
+    .main .center .tools .pay {
+      display: inline-block;
+      width: 234px;
+      height: 170px;
+      float: left;
+    }
+    .main .center .tools .p {
+      display: inline-block;
+      width: 321px;
+      height: 170px;
+      float: left;
+      background-color: #000;
+      margin-left: 10px;
+    }
+    .main .center .tools .pay  div {
+      display: inline-block;
+      float: left;
+      width: 78px;
+      height: 85px;
+      text-align: center;
+      line-height: 85px;
+      background-color: #5F5750;
+      color: #cfcbcd;
+    }
+    .main .center .tools .p img {
+      width: 100%;
+    }
+    .main .center .tools .p:hover {
+      box-shadow: 0px 20px 50px 0px #aaaaaa;
+      transition: 0.5s;
+    }
+    .main .center .tools .pay  div:hover {
+      color: #ffffff;
+      transition: 0.5s;
+    }
+
+    .main .center .shop {
+      width: 1228px;
+      height: 340px;
+      position: absolute;
+    }
+    .main .center .shop .time {
+      display: inline-block;
+      width: 234px;
+      height: 340px;
+    }
+    .main .center .shop .itme {
+      display: inline-block;
+      width: 980px;
+      height: 340px;
+      position: absolute;
+      margin-left: 15px;;
+      overflow: hidden;
+    }
+    .main .center .shop .itme .box {
+      position: absolute;
+      width: 5880px;
+      height: 340px;
+      background-color: RED;
+      transition: right 1s;
+
+    }
+    .main .center .shop .itme .box .p {
+      display: inline-block;
+      margin-right:15px;
+      float:right;
+      width: 230px;
+      height: 340px;
+      background-color: #111;
+    }
+    .main .center .shop .itme input:nth-child(1):checked+ * + * + * + * + * +.box {
+     left: -980px;
+     transition: left 1s;
+    }
+    .main .center .shop .itme input:nth-child(2):checked+ * + * + * + * +.box {
+     left: -1960px;
+     transition: left 1s;
+    }
+    .main .center .shop .itme input:nth-child(3):checked+ * + * + * +.box {
+     left: -2940px;
+     transition: left 1s;
+    }
+     .main .center .shop .itme input:nth-child(4):checked+ * + * +.box {
+      left: -3920px;
+      transition: left 1s;
+     }
+     .main .center .shop .itme input:nth-child(5):checked+ * + .box {
+      left: -4900px;
+      transition: left 1s;
+     }
+     .main .center .shop .itme input:nth-child(6):checked+.box {
+      left: -5880px;
+      transition: right 1s;
+     }
+
+
+</style>
+<body>
+  <div class="head">
+    <div class="nav-top">
+      <div class="name">
+        <span>小米商城</span>|
+        <span>MIUI</span>|
+        <span>ioT</span>|
+        <span>云服务</span>|
+        <span>金融</span>|
+        <span>有品</span>|
+        <span>小爱开放平台</span>|
+        <span>政企服务</span>|
+        <span>下载app</span>|
+        <span>Select Region</span>
+      </div>
+      <div class="cart">
+        购物车（0）
+        <div class="cart-m">
+          购物车中还没有商品，赶紧选购吧！
+        </div>
+      </div>
+      <div class="login">
+        <span>登陆</span>|
+        <span>注册</span>|
+        <span>消息通知</span>
+      </div>
+
+    </div>
+  </div>
+  <div class="main">
+    <div class="nav">
+      <div class="logo">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542985207620&di=9ff174a83bcbe161cf74dc9eea40af1c&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D1781034015%2C1899736122%26fm%3D214%26gp%3D0.jpg" alt="" width="52px" height="52px">
+      </div>
+      <div class="topnav">
+        <span>小米手机</span>
+        <span>红米</span>
+        <span>电视</span>
+        <span>笔记本</span>
+        <span>空调</span>
+        <span>新品</span>
+        <span>路由器</span>
+        <span>智能硬件</span>
+        <span>服务</span>
+        <span>社区</span>
+      </div>
+      <div class="search">
+        <input type="serach" id="a" placeholder="小米8" >
+        <input type="submit" id="b" value="放大镜">
+      </div>
+
+    </div>
+    <div class="center">
+      <div class="scroll">
+        <input type="radio" name="scroll" id="s1" checked>
+        <input type="radio" name="scroll" id="s2">
+        <input type="radio" name="scroll" id="s3">
+        <input type="radio" name="scroll" id="s4">
+        <input type="radio" name="scroll" id="s5">
+        <div>
+          <label class="ll" for="s5">&lt;</label>
+          <label class="lr" for="s2">&gt;</label>
+          <img src="https://i1.mifile.cn/a4/xmad_1542718183295_gZCXT.jpg" alt="">
+        </div>
+        <div>
+          <label class="ll" for="s1">&lt;</label>
+          <label class="lr" for="s3">&gt;</label>
+          <img src="https://i1.mifile.cn/a4/xmad_15427940817559_aubLz.jpg" alt="">
+        </div>
+        <div>
+          <label class="ll" for="s2">&lt;</label>
+          <label class="lr" for="s4">&gt;</label>
+          <img src="https://i1.mifile.cn/a4/xmad_1542593050318_TVIrS.jpg" alt="">
+        </div>
+        <div>
+          <label class="ll" for="s3">&lt;</label>
+          <label class="lr" for="s5">&gt;</label>
+          <img src="https://i1.mifile.cn/a4/xmad_15428849550108_lAmdx.jpg" alt="">
+        </div>
+        <div>
+          <label class="ll" for="s4">&lt;</label>
+          <label class="lr" for="s1">&gt;</label>
+          <img src="https://i1.mifile.cn/a4/xmad_15429676371669_MnjCY.jpg" alt="">
+        </div>
+        <section>
+          <label for="s1"></label>
+          <label for="s2"></label>
+          <label for="s3"></label>
+          <label for="s4"></label>
+          <label for="s5"></label>
+        </section>
+      </div>
+      <div class="sidebar">
+        <ul>
+          <li>手机 电话卡
+            <ul>
+              <li>小米max3</li>
+              <li>小米8 青春版</li>
+            </ul>
+          </li>
+          <li>电视 盒子
+            <ul>
+
+            </ul>
+          </li>
+          <li>笔记本 平板
+            <ul>
+
+            </ul>
+          </li>
+          <li>家电 插线板
+            <ul>
+              <li>小米max3</li>
+              <li>小米8 青春版</li>
+
+            </ul>
+          </li>
+          <li>出行穿戴
+            <ul>
+
+            </ul>
+          </li>
+          <li>智能 路由器
+            <ul>
+
+            </ul>
+          </li>
+          <li>电源 配件
+            <ul>
+
+            </ul>
+          </li>
+          <li>健康 儿童
+            <ul>
+
+            </ul>
+          </li>
+          <li>耳机 音箱
+            <ul>
+
+            </ul>
+          </li>
+          <li>生活 箱包
+            <ul>
+
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="tools">
+        <div class="pay">
+          <div>选购手机</div>
+          <div>企业团购</div>
+          <div>F码通道</div>
+          <div>米粉卡</div>
+          <div>以旧换新</div>
+          <div>话费充值</div>
+        </div>
+        <div class="p">
+          <img src="https://i1.mifile.cn/a4/xmad_15381015124677_QcEGp.jpg" alt="">
+        </div>
+        <div class="p">
+          <img src="https://i1.mifile.cn/a4/xmad_15410029988871_TdzPQ.jpg" alt="">
+        </div>
+        <div class="p">
+          <img src="https://i1.mifile.cn/a4/xmad_15410599445473_Ivjsb.jpg" alt="">
+        </div>
+      </div>
+      <div>
+        <h2>小米闪购</h2>
+        <div>
+          <label for=""></label>
+          <label for=""></label>
+        </div>
+      </div>
+
+      <div class="shop">
+        <div class="time"></div>
+        <div class="itme">
+          <input type="radio" name="updown" id="r1" value="" checked>
+          <input type="radio" name="updown" id="r2" value="">
+          <input type="radio" name="updown" id="r3" value="">
+          <input type="radio" name="updown" id="r4" value="">
+          <input type="radio" name="updown" id="r5" value="">
+          <input type="radio" name="updown" id="r6" value="">
+          <div class="box">
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+              <div class="p"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

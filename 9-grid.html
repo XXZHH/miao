@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    background-color: rgba(0, 0, 0, 0.05);
+
+  }
+
+  .box {
+    width: 170px;
+    height: 170px;
+  }
+
+  .box div {
+    width: 50px;
+    height: 50px;
+    border: 5px solid blue;
+    margin-right: -5px;
+    margin-bottom: -5px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+
+  }
+
+  .box div:hover {
+    border: 5px solid red;
+    position: relative;
+    cursor: pointer;
+  }
+
+
+  .box2 {
+    width: 170px;
+    height: 170px;
+  }
+
+  .box2 div {
+    width: 50px;
+    height: 50px;
+    border: 5px solid blue;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .box2 div:nth-child(3n-2) {
+    margin-top: -5px;
+  }
+
+  .box2 div:nth-child(3n-1) {
+    margin-left: 55px;
+    margin-top: -60px;
+  }
+
+  .box2 div:nth-child(3n-3) {
+    margin-left: 110px;
+    margin-top: -60px;
+  }
+
+  .box2 div:hover {
+    border: 5px solid red;
+    position: relative;
+    cursor: pointer;
+  }
+  ol {
+    width: 170px;
+    height: 170px;
+    list-style-type: none;
+  }
+  li {
+    display: inline;
+  }
+  a {
+    width: 50px;
+    height: 50px;
+    border: 5px solid blue;
+    float: left;
+    margin: 0 -5px -5px 0;
+    text-align: center;
+    line-height: 50px;
+  }
+  a:hover {
+    border: 5px solid red;
+    position: relative;
+    cursor: pointer;
+  }
+  table {
+    width: 170px;
+    height: 170px;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 5px 5px;
+
+
+  }
+  td {
+    width: 50px;
+    height: 50px;
+    border: 5px solid blue;
+
+  }
+  td:hover {
+    border: 5px solid red;
+    position: relative;
+    z-index: 9;
+
+  }
+</style>
+
+<body>
+  <div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </div>
+
+  <p></p>
+
+  <div class="box2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </div>
+
+  <p></p>
+
+  <ol>
+    <li><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><a href="">3</a></li>
+    <li><a href="">4</a></li>
+    <li><a href="">5</a></li>
+    <li><a href="">6</a></li>
+    <li><a href="">7</a></li>
+    <li><a href="">8</a></li>
+    <li><a href="">9</a></li>
+  </ol>
+
+  <table>
+    <body>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+
+    </body>
+  </table>
+
+
+
+
+
+  </div>
+</body>
+
+</html>
