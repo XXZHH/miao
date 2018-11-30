@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    @font-face {
+        font-family: icon;
+        src: url(fontawesome-webfont.woff2)
+    }
+    .icon-font {
+        font-family: icon;
+        font-style: normal;
+    }
+    .star::before {
+        content: "\f004";
+    }
+    .x2 {
+        font-size: 2em;
+    }
+    .x4 {
+        font-size: 4em;
+    }
+    .lg {
+      font-size: 1.333333em;
+      line-height: 0.75em;
+      vertical-align: -15%;
+    }
+    ul {
+      padding: 0;
+      margin-left: 2.1486em;
+      list-style-type: none;
+    }
+    .border {
+      padding: .2em .25em .15em;
+      border: solid 0.08em #eee;
+      border-radius: .1em;
+    }
+    .left {
+      float: left;
+    }
+</style>
+<body>
+    <i class="icon-font star x2">123</i>
+    <i class="icon-font star x4">123</i>
+    <ul>123
+      <li class="icon-font star ul">1</li>
+      <li class="icon-font star ul">2</li>
+      <li class="icon-font star ul">3</li>
+      <li class="icon-font star ul">4</li>
+      <li class="icon-font star ul">5</li>
+    </ul>
+
+    <i class="icon-font star x4 border left">我Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam obcaecati, facere libero corrupti ex fugiat id. Sunt molestiae nemo hic, iure, accusantium voluptatem cupiditate distinctio enim, dolorum atque optio nesciunt!</i>
+</body>
+</html>

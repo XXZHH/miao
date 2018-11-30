@@ -100,16 +100,23 @@
 
 
   }
+  tr {
+    border: 5px solid blue;
+  }
+  col {
+    border: 5px solid blue;
+
+  }
   td {
     width: 50px;
     height: 50px;
-    border: 5px solid blue;
+  
 
   }
   td:hover {
     border: 5px solid red;
-    position: relative;
-    z-index: 9;
+    cursor: pointer;
+
 
   }
 </style>
@@ -156,7 +163,10 @@
   </ol>
 
   <table>
-    <body>
+    <tbody>
+      <col>
+      <col>
+      <col>
       <tr>
         <td>1</td>
         <td>2</td>
