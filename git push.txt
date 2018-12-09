@@ -2,3 +2,6 @@ git init
 git add .
 git commit -m "name"
 git push -u origin master
+
+
+browser-sync start --server --files .

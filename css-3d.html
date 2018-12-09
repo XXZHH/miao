@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+section {
+  transform-style: preserve-3d; 
+  transform: rotatex(40deg)rotatey(20deg);
+  position: relative;
+  color:#fff;
+  font-size:60px;
+  
+  
+}
+div {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+.a1 {
+  background-color: red;
+  position: absolute;
+  top:200px;
+  left:200px;
+  z-index:6;
+
+}
+.a2 {
+  background-color: blue;
+  transform-origin: bottom ;
+  transform: rotatex(90deg) ;
+  position: absolute;
+   top:200px;
+  left:200px;
+  z-index:1;
+
+}
+.a3 {
+  background-color: green;
+  transform-origin: left;
+  transform: rotatey(90deg) ;
+  position: absolute;
+   top:200px;
+  left:200px;
+  z-index:2;
+}
+.a4 {
+  background-color: black;
+  transform-origin: right;
+  transform: rotatey(270deg);
+  position: absolute;
+   top:200px;
+  left:200px;
+  z-index:2;
+
+}
+.a5 {
+  background-color: gold;
+  transform-origin: top;
+  transform: rotatex(270deg);
+  position: absolute;
+  top:200px;
+  left:200px;
+  z-index:2;
+
+}
+.a6 {
+  background-color: pink;
+  transform: translatez(-100px) ;
+  position: absolute;
+   top:200px;
+  left:200px;
+}
+
+</style>
+<body>
+  <section>
+    <div class="a1">1</div>
+    <div class="a2">2</div>
+    <div class="a3">3</div>
+    <div class="a4">4</div>
+    <div class="a5">5</div>
+    <div class="a6">6</div>
+  </section>
+    
+</body>
+</html>
