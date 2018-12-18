@@ -7,86 +7,179 @@
   <title>Document</title>
 </head>
 <style>
-section {
-  transform-style: preserve-3d; 
-  transform: rotatex(40deg)rotatey(20deg);
-  position: relative;
-  color:#fff;
-  font-size:60px;
-  
-  
+* {
+  xbackground-color: rgba(0,0,0,0.05);
 }
-div {
+
+@keyframes spin-3d {
+  frome {
+    transform: rotatex(0deg) rotatez(0);
+  }
+  to {
+    transform: rotatex(360deg) rotatez(3600deg);
+}
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: auto;
+  margin-top: 200px;
+  transform-style: preserve-3d;
+  transform: perspective(800px) rotatex(45deg) rotatey(0deg) rotatez(deg);
+  transition: 1s;
+  animation: spin-3d 30s infinite linear;
+  transform-origin: left top;
+}
+.box > div {
   width: 100px;
   height: 100px;
-  text-align: center;
-  line-height: 100px;
-}
-.a1 {
-  background-color: red;
   position: absolute;
-  top:200px;
-  left:200px;
-  z-index:6;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: 1s;
 
 }
-.a2 {
-  background-color: blue;
-  transform-origin: bottom ;
-  transform: rotatex(90deg) ;
+.left {
+  transform: rotatey(90deg) translatez(50px); 
+  xbackground-image: linear-gradient(to left top,red,orange,yellow,green,orange);
+  opacity:0.5;
+  border:1px solid;
+}
+.right {
+  transform: rotatey(-90deg) translatez(50px);
+  xbackground-image: linear-gradient(to left top,red,orange,yellow,green,blue);
+  opacity:0.5;
+  border:1px solid;
+}
+.top {
+  transform: translatez(50px);
+    xbackground-image: linear-gradient(to left bottom,red,orange,yellow,green,blue);
+  opacity:0.5;
+  border:1px solid;
+}
+.bottom {
+  transform:rotatex(180deg) translatez(50px);
+  xbackground-image: linear-gradient(to left bottom,red,orange,yellow,green,blue);
+  border:1px solid;
+}
+.after {
+  transform: rotatex(90deg) translatez(50px);
+  xbackground-image: linear-gradient(to left top,red,orange,yellow,green,blue);
+  border:1px solid;
+  opacity:0.5;
+}
+.befor {
+  transform: rotatex(-90deg) translatez(50px);
+  xbackground-image: linear-gradient(to left top,red,orange,yellow,green,blue);
+  opacity:0.5;
+  border:1px solid;
+}
+@keyframes sspin-3d {
+  frome {
+    transform: rotatex(0deg) rotatez(0);
+  }
+  to {
+    transform: rotatex(360deg) rotatez(3600deg);
+}
+}
+
+.sbox {
+  width: 100px;
+  height: 100px;
   position: absolute;
-   top:200px;
-  left:200px;
-  z-index:1;
+  transform-style: preserve-3d;
+  transform:  rotatex() rotatey(0deg) rotatez(0
+  );
+  animation: sspin-3d 10s infinite linear;
 
 }
-.a3 {
-  background-color: green;
-  transform-origin: left;
-  transform: rotatey(90deg) ;
+.sbox > div {
+  width: 50px;
+  height: 50px;
   position: absolute;
-   top:200px;
-  left:200px;
-  z-index:2;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: 1s;
 }
-.a4 {
-  background-color: black;
-  transform-origin: right;
-  transform: rotatey(270deg);
-  position: absolute;
-   top:200px;
-  left:200px;
-  z-index:2;
+.sleft {
+  transform: rotatey(90deg) translatez(25px); 
+  background-color: #111;
+}
+.sright {
+  transform: rotatey(-90deg) translatez(25px);
+  background-color: #111;
+}
+.stop {
+  transform: translatez(25px);
+  background-color: #111;
+}
+.sbottom {
+  transform:rotatex(180deg) translatez(25px);
+  background-color: #111;
 
 }
-.a5 {
-  background-color: gold;
-  transform-origin: top;
-  transform: rotatex(270deg);
-  position: absolute;
-  top:200px;
-  left:200px;
-  z-index:2;
+.safter {
+  transform: rotatex(90deg) translatez(25px);
+  background-color: #111;
 
 }
-.a6 {
-  background-color: pink;
-  transform: translatez(-100px) ;
-  position: absolute;
-   top:200px;
-  left:200px;
+.sbefor {
+  transform: rotatex(-90deg) translatez(25px);
+  background-color: #111;
 }
+
+.box:hover {
+  transform-origin: center center;
+  animation-play-state:paused;
+}
+.box:hover .sbox{
+  transform-origin: center center;
+}
+.box:hover .stop{
+  transform: translatez(50px);
+}
+.box:hover .sbottom{
+  transform: rotatex(180deg) translatez(50px);
+}
+.box:hover .sleft{
+  transform: rotatey(90deg) translatez(50px);
+}
+.box:hover .sright{
+  transform: rotatey(-90deg)  translatez(50px);
+}
+.box:hover .sbefor{
+  transform: rotatex(-90deg) translatez(50px);
+}
+.box:hover .safter{
+  transform: rotatex(90deg) translatez(50px);
+}
+
 
 </style>
 <body>
-  <section>
-    <div class="a1">1</div>
-    <div class="a2">2</div>
-    <div class="a3">3</div>
-    <div class="a4">4</div>
-    <div class="a5">5</div>
-    <div class="a6">6</div>
-  </section>
-    
+    <div class="box">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="befor"></div>
+        <div class="after"></div>
+        <div class="sbox">
+          <div class="stop aa"></div>
+          <div class="sbottom aa"></div>
+          <div class="sleft aa"></div>
+          <div class="sright aa"></div>
+          <div class="sbefor aa"></div>
+          <div class="safter aa"></div>
+        </div>
+    </div>
 </body>
 </html>

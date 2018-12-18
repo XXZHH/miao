@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  a::after {
+    content: attr()
+  }
+  * {
+  background-color: rgba(0,0,0,0.05);
+}
+@keyframes box{
+  0% {
+     transform: perspective(200px)   rotatez(0deg);
+  }
+  50% {
+     transform: perspective(200px)  rotatez(180deg);
+  }
+  100% {
+     transform: perspective(200px)   rotatez(360deg);
+  }
+}
+@keyframes sbox{
+  0% {
+     transform: perspective(200px) translatey(200px)  rotatez(0deg);
+  }
+  50% {
+     transform: perspective(200px) translatey(200px)  rotatez(-180deg);
+  }
+  100% {
+     transform: perspective(200px) translatey(200px)   rotatez(-360deg);
+  }
+}
+
+section {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  margin-top: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(200px) rotatey(deg)  rotatez(20deg);
+  animation: box 10s infinite linear;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: translatey(200px);
+  animation: sbox 10s infinite linear;
+  background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544523298791&di=d516b93b5ee5978f3186970817354f44&imgtype=0&src=http%3A%2F%2Fimage.tupian114.com%2F20140417%2F10215967.png);
+  background-size: 100%;
+  border-radius: 50%;
+}
+
+
+</style>
+<body>
+    <section>
+        <div ></div>
+      </section>
+</body>
+</html>
