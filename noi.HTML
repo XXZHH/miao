@@ -169,7 +169,12 @@
 </script>
 
 <script id="ch0103/13" type="0103-13">
-
+  var n = 100;
+  var g = n % 10
+  var s = (n % 100 - g) / 10;
+  var b = (n - (n % 100)) / 100;
+  var x = g * 100 + s * 10 + b;
+  console.log(x);
 </script>
 
 <script id="ch0103/14" type="0103-14">
@@ -400,10 +405,10 @@ console.log(x);
   if (a + b > c) {
     if (a + c > b) {
       if (b + c > a) {
-        console.log("YES");
-      } else console.log("NO");
-    } else console.log("NO");
-  } else console.log("NO");
+        console.log("yes");
+      } else console.log("no");
+    } else console.log("no");
+  } else console.log("no");
 </script>
 
 <script id="ch0104/17" type="0104-17">
@@ -462,9 +467,9 @@ console.log(x);
 </script>
 
 <script id="ch0104/20" type="0104-20">
-  var a = 1.0;
-  var b = 2.0;
-  var c = 8.0;
+  var a =  +prompt();
+  var b =  +prompt();
+  var c =  +prompt();
   var bb = b * b;
   var ac = 4 * a * c;
   var x1;
