@@ -174,7 +174,7 @@
   var s = (n % 100 - g) / 10;
   var b = (n - (n % 100)) / 100;
   var x = g * 100 + s * 10 + b;
-  console.log(x);
+  console.log("g"+"s"+"b");
 </script>
 
 <script id="ch0103/14" type="0103-14">
@@ -509,7 +509,7 @@ console.log(x);
     n = n + 1;
   }
   var c = z / p;
-  console.log(c);
+  console.log(c.toFixed(2));
 </script>
 
 <script id="ch0105/02" type="0105-02">
@@ -523,7 +523,7 @@ console.log(x);
     n = n + 1;
   }
   var c = z / p;
-  console.log(c.toFixed(2));
+  console.log("$" + c.toFixed(2));
 </script>
 
 <script id="ch0105/03" type="0105-03">
@@ -681,8 +681,79 @@ console.log(x);
 </script>
 
 <script id="ch0105/12" type="0105-12">
+  var N = +prompt("样本数");
+  var m = +prompt("指定数字");
+  var a;
+  var i = 0;
+  var x = 0;
+  while (i < N) {
+    a = +prompt();
+    x = (a == m ? x = x + 1 : x = x);
+    i = i + 1;
+  }
+  console.log(x);
+</script>
+
+<script id="ch0105/13" type="0105-13">
+  var a = +prompt("整数");
+  var n = +prompt("正整数");
+  var i = 0;
+  var x = 1;
+  while (i < n) {
+    x = x * a
+    i = i + 1;
+  }
+  console.log(x);
+</script>
+
+<script id="ch0105/14" type="0105-14">
+  var x = +prompt("人口基数单位亿");
+  var n = +prompt("年份");
+  var i = 0;
+  var a = 0.001;
+  var b = x;
+  while (i < n) {
+    b = b * (1 + a)
+    i = i + 1;
+  }
+  console.log(b.toFixed(4));
+</script>
+
+<script id="ch0105/15" type="0105-15">
+  var R = +prompt("利率")/100 + 1;
+  var M = +prompt("钱");
+  var Y = +prompt("年份");
+  var x = M;
+  var z;
+
+  var i = 0;
+  while (i < Y) {
+    x = R * x;
+    i = i + 1;
+  }
+  console.log(Math.floor(x));
+</script>
+
+<script id="ch0105/16" type="0105-16">
+  var N = +prompt("年薪单位万");
+  var K = +prompt("房子增长比") / 100 + 1;
+  var a = 200;
+  var z = N;
+  var i = 1;
+  while (z < a) {
+    a = a * K;
+    i = i + 1;
+    z = z + N;
+  }
+  if (i <= 20) {
+    console.log(i);
+  }else console.log("Impossible");
+</script>
+
+<script id="ch0105/17" type="0105-17">
  
 </script>
+
 
 
 
