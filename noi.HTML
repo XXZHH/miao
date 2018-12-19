@@ -470,6 +470,7 @@ console.log(x);
   var a =  +prompt();
   var b =  +prompt();
   var c =  +prompt();
+  debugger
   var bb = b * b;
   var ac = 4 * a * c;
   var x1;
@@ -495,6 +496,196 @@ console.log(x);
   var z = n - c;
   console.log(z);
 </script>
+
+
+<script id="ch0105/01" type="0105-01">
+  var n = 0;
+  var p =+prompt("学生人数");
+  var x;
+  var z = 0;
+  while (n < p) {
+    var x = +prompt();
+    z = z + x;
+    n = n + 1;
+  }
+  var c = z / p;
+  console.log(c);
+</script>
+
+<script id="ch0105/02" type="0105-02">
+  var n = 0;
+  var p = 12;
+  var x;
+  var z = 0;
+  while (n < p) {
+    var x = +prompt();
+    z = z + x;
+    n = n + 1;
+  }
+  var c = z / p;
+  console.log(c.toFixed(2));
+</script>
+
+<script id="ch0105/03" type="0105-03">
+  var n = 0;
+  var p = +prompt("样本数");
+  var x;
+  var z = 0;
+  while (n < p) {
+    var x = +prompt();
+    z = z + x;
+    n = n + 1;
+  }
+  var c = z / p;
+  console.log(c.toFixed(4));
+</script>
+
+<script id="ch0105/04" type="0105-04">
+  var n = 0;
+  var p = +prompt("样本数");
+  var x;
+  var z = 0;
+  while (n < p) {
+    var x = +prompt();
+    z = z + x;
+    n = n + 1;
+  }
+  var c = z / p;
+  console.log(z);
+  console.log(c.toFixed(5));
+</script>
+
+<script id="ch0105/05" type="0105-05">
+  var n = 0;
+  var p = +prompt("样本数");
+  var x = 0;;
+  var d = 0;;
+  var z = 0;
+  var a;
+  while (n < p) {
+    var x = +prompt();
+    a = Math.max(x,d);
+    var d = a;
+    z = z + x;
+    n = n + 1;
+  }
+  console.log(a);
+</script>
+
+<script id="ch0105/06" type="0105-06">
+  debugger
+  var n = 0;
+  var p = +prompt("样本数");
+  var x = 0;
+  var d = 0;
+  var z = 0;
+  var e = 1;
+  var b;
+  var a;
+  while (n < p) {
+    var x = +prompt();
+    a = Math.max(x,d);
+    b = Math.min(x,e);
+    var d = a;
+    var e = b;
+    z = z + x;
+    n = n + 1;
+  }
+  var f = a - b;
+  console.log(f);
+</script>
+
+<script id="ch0105/07" type="0105-07">
+  var n = 0;
+  var p =+prompt("天数");
+  var j;
+  var y;
+  var t;
+  var j1 = 0;
+  var y1 = 0;
+  var t1 = 0;
+  while (n < p) {
+    var j = +prompt();
+    var y = +prompt();
+    var t = +prompt();
+    j1 = j1 + j;
+    y1 = y1 + y;
+    t1 = t1 + t;
+    n = n + 1;
+  }
+  var q = j1 + y1 + t1;
+  console.log(j1);
+  console.log(y1);
+  console.log(t1);
+  console.log(q);
+</script>
+
+<script id="ch0105/08" type="0105-08">
+  var i = 0;
+  var n =+prompt("边数");
+  var a = (n - 2) * 180;
+  n = n - 1;
+  var x;
+  while (i < n) {
+    var x = +prompt();
+    a = a - x;
+    i = i + 1;
+  }
+  console.log(a);
+</script>
+
+<script id="ch0105/09" type="0105-09">
+  var a = +prompt("第一个数");
+  var b = +prompt("第二个数");
+  var x = a % 2 == 0 ? x = a + 1 : x = a ;
+  var z = b % 2 == 0 ? z = b - 1 : z = b ;
+  var c = 0;
+  while (x <= z) {
+    c = c + x;
+    x = x + 2;
+  }
+  console.log(c);
+</script>
+
+<script id="ch0105/10" type="0105-10">
+  var a = +prompt("第一个数");
+  var b = +prompt("第二个数");
+  var z;
+  var c = 0;
+  while (a <= b) {
+    z =(a % 17 == 0 ? a : 0);
+    c = c + z;
+    a = a + 1;
+  }
+  console.log(c);
+</script>
+
+<script id="ch0105/11" type="0105-11">
+  var n = 0;
+  var k =+prompt("样本数");
+  var x;
+  var a = 0;
+  var b = 0;
+  var c = 0;
+  var z = 0;
+  while (n < k) {
+    var x = +prompt();
+    a = (x == 1? a = a + 1 : a = a)
+    b = (x == 5? b = b + 1 : b = b)
+    c = (x == 10? c = c + 1 : c = c)
+    n = n + 1;
+  }
+  console.log(a);
+  console.log(b);
+  console.log(c);
+</script>
+
+<script id="ch0105/12" type="0105-12">
+
+</script>
+
+
+
 
 
 
