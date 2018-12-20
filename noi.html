@@ -318,13 +318,23 @@
 
 <script id="ch0104/09" type="0104-09">
   var x = 105;
-  if (x % 3 == 0 ) {
-    if (x % 5 == 0) {
-      if (x % 7 == 0) {
-        console.log("3","5","7");
-      }else console.log("3","5");
-    }else console.log("3");
-  } else console.log("n");
+  var a;
+  var b;
+  var c;
+  var z = a + b + c
+  if (x % 3 == 0) {
+    a = "3"
+  };
+  if (x % 5 == 0) {
+    b = "5"
+  };
+  if (x % 7 == 0) {
+    c = "7"
+  };
+  if (x % 3 == 0 && x % 5 == 0 && x % 7 == 0) {
+    console.log("n");
+  };
+ console.log(z);
 </script>
 
 <script id="ch0104/10" type="0104-10">
@@ -751,15 +761,255 @@ console.log(x);
 </script>
 
 <script id="ch0105/17" type="0105-17">
- 
+  var k = +prompt("正整数") - 2;
+  var i = 0;
+  var a = 1;
+  var b = 1;
+  var x = 0;
+  var y = 0;
+  var z = 0;
+  while (i < k) {
+    x = a + b;
+    a = b;
+    b = x;
+    i = i + 1;
+  }
+  console.log(x);
 </script>
 
+<script id="ch0105/18" type="0105-18">
+  var n = +prompt("样本数") - 1;
+  var i = 0;
+  var a1 = +prompt("样本数");
+  var b1 = +prompt("样本数");
+  var x = b1 /a1;
+  var a;
+  var b;
+  var y;
+  while (i < n) {
+    a = +prompt("总病例数");
+    b = +prompt("疗效有效数");
+    y = b / a;
+    i = i + 1;
+    if (y - x > 0.05) {
+      console.log("better");
+    } else if (x - y > 0.05) {
+      console.log("worse");
+    } else console.log("same");
+  }
+</script>
 
+<script id="ch0105/19" type="0105-19">
+  var n = +prompt("屋顶数");
+  var i = 0;
+  var x;
+  var y;
+  var z;
+  var a;
+  var b;
+  var c;
+  var d;
+  var e = 0;
+  while (i < n) {
+    x = +prompt("x");
+    y = +prompt("y");
+    z = +prompt("人数");
+    a = Math.sqrt(x * x + y * y) * 2;
+    b = a / 50;
+    c = 1.5 * z;
+    d = c + b;
+    e = e + d;
+    i = i + 1;
+  }
+  console.log(Math.ceil(e));
+</script>
 
+<script id="ch0105/20" type="0105-20">
+  var h = +prompt("高度");
+  var i = 0;
+  var x = h;
+  while (i < 10) {
+    h = h / 2
+    x = x + h * 2;
+    i = i + 1;
+  }
+  x = x - 2 * h;
+  console.log(x.toFixed(4));
+  console.log(h.toFixed(7));
+</script>
 
+<script id="ch0105/21" type="0105-21">
+  var N = +prompt("整数");
+  var i = 0;
+  var x;;
+  var y;
+  do {
+    if (N % 2 != 0) {
+      x = (N + "*" + 3 + "+" + 1);
+      N = N * 3 + 1;
+      console.log(x + "=" + N);
+    } else {
+      y = (N + "/" + 2 );
+      N = N / 2;
+      console.log(y + "=" + N);
+    }
+  } while (N != 1)
+  console.log("End");
+</script>
 
+<script id="ch0105/22" type="0105-22">
+  var i = 0;
+  var n;
+  <!-- 每个月预算 -->
+  var x = 0;
+  <!-- 当月余额 -->
+  var y;
+  <!-- 当月要存的钱 -->
+  var z;
+  <!-- 存钱总数 -->
+  var a = 0;
+  var b;
+  var c;
+  while (i < 12) {
+    n = +prompt("整数");
+    y = (parseInt((300 + x - n)/100)) * 100;
+    x = 300 + x - n - y;
+    a = a + y
+    i = i + 1;
+    if (x < 0 ) {
+      console.log("-" + i)
+      break;
+    }
+  }
+  b = a * 1.2 + x;
+  console.log(b);
+</script>
 
+<script id="ch0105/23" type="0105-23">
+  var i = 0;
+  var m = +prompt("药品总数");
+  var n = +prompt("取药人数");
+  var a;
+  var x;
+  var y = 0;
+  while (i < n) {
+    i = i + 1;
+    a = +prompt("要取得药品数");
+    if (m - a >= 0) {
+      m = m - a;
+    } else y = y + 1;
+  }
+  console.log(y);
+</script>
 
+<script id="ch0105/24" type="0105-24">
+  var i = 0;
+  var n = +prompt("时间单位小时");
+  var a;
+  var b;
+  var x;
+  var y;
+  while(i < n) {
+    i = i + 1;
+    var a = +prompt("收缩压");
+    var b = +prompt("舒张压");
+    if (a >= 90 && a<= 140 && b >= 60 && b <= 90) {
+      x = x + 1;
+    } else x = 0;
+  }
+console.log(x);
+</script>
+
+<script id="ch0105/25" type="0105-25">
+  var i = 0;
+  var a;
+  var b;
+  while () {
+    a = i.toString(7);
+    b = i.toString(7);
+    i = i + 1;
+  }
+</script>
+
+<script id="ch0105/26" type="0105-26">
+  var n = +prompt("样本数");
+  var i = 0;
+  var x;
+  var a;
+  var b;
+  var c;
+  var d;
+  var y;
+  var z = 0;
+  while (i < n) {
+    i = i + 1;
+    x = +prompt("整数");
+    a = parseInt(x % 10);
+    b = parseInt((x % 100)/10);
+    c = parseInt((x % 1000)/100);
+    d = parseInt((x % 10000)/1000);
+    y = a - d - c - b;
+    if (y <= 0) {
+      continue;
+    } else z = z + 1; ;
+  }
+  console.log(z);
+</script>
+
+<script id="ch0105/27" type="0105-27">
+  var i = 0;
+  var K = +prompt("整数");
+  var S = 0;
+  while (true) {
+    i = i + 1;
+    S = S + 1 / i;
+    if (S > K) {
+      console.log(i);
+      break;
+    } else continue;
+  }
+</script>
+
+<script id="ch0105/28" type="0105-28">
+  var i = 1;
+  var n = +prompt("整数");
+  var x = 1;
+  var a = 1;
+  do {
+    x = parseInt((n % (10 * a)) / (1 * a));
+    a = 10 ** i;
+    i = i + 1;
+    if (x == 0 ) {
+      break;
+    } else console.log(x);
+  } while (x != 0);
+</script>
+
+<script id="ch0105/29" type="0105-29">
+  debugger
+  var i = 0;
+  var n = +prompt("整数");
+  var a = 0;
+  var b = 0;
+  var c = 0;
+  var x = 1;
+  var y = 0;
+  var z = 0;
+  while (x != 0) {
+    a = 10 ** b;
+    x = parseInt((n % (10 * a)) / (1 * a));
+    b = b + 1;
+  }
+  b = b - 2;
+  while (b >= 1) {
+    y = 10 ** i
+    x = parseInt((n % (10 * y)) / (1 * y));
+    i = i + 1;
+    z = x * 10 ** b + z;
+    b = b - 1;
+  }
+  console.log(z);
+</script>
 
 
 
