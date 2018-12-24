@@ -765,9 +765,7 @@ console.log(x);
   var i = 0;
   var a = 1;
   var b = 1;
-  var x = 0;
-  var y = 0;
-  var z = 0;
+  var x = 0; 
   while (i < k) {
     x = a + b;
     a = b;
@@ -907,8 +905,8 @@ console.log(x);
   var n = +prompt("时间单位小时");
   var a;
   var b;
-  var x;
-  var y;
+  var x = 0;
+  var y = 0;
   while(i < n) {
     i = i + 1;
     var a = +prompt("收缩压");
@@ -916,8 +914,9 @@ console.log(x);
     if (a >= 90 && a<= 140 && b >= 60 && b <= 90) {
       x = x + 1;
     } else x = 0;
+    y = Math.max(x,y);
   }
-console.log(x);
+console.log(y);
 </script>
 
 <script id="ch0105/25" type="0105-25">
@@ -971,50 +970,480 @@ console.log(x);
 </script>
 
 <script id="ch0105/28" type="0105-28">
-  var i = 1;
+  var i = 0;
   var n = +prompt("整数");
   var x = 1;
   var a = 1;
+  var x = n;
+  var b = 0;
+  var y = 0;
+  while (x != 0) {
+    x = parseInt(x / 10);
+    b = b + 1;
+  }
   do {
-    x = parseInt((n % (10 * a)) / (1 * a));
-    a = 10 ** i;
+    y = 10 ** i;
+    x = parseInt((n % (10 * y)) / (1 * y));
     i = i + 1;
-    if (x == 0 ) {
-      break;
-    } else console.log(x);
-  } while (x != 0);
+    b = b - 1;
+    console.log(x);
+  } while (b > 0 )
 </script>
 
 <script id="ch0105/29" type="0105-29">
-  debugger
   var i = 0;
-  var n = +prompt("整数");
+  var m = +prompt("整数");
+  var n = Math.abs(m);
   var a = 0;
   var b = 0;
   var c = 0;
-  var x = 1;
+  var x = n;
   var y = 0;
   var z = 0;
   while (x != 0) {
-    a = 10 ** b;
-    x = parseInt((n % (10 * a)) / (1 * a));
+    x = parseInt(x / 10);
     b = b + 1;
   }
-  b = b - 2;
-  while (b >= 1) {
-    y = 10 ** i
+  b = b - 1;
+  do {
+    y = 10 ** i;
     x = parseInt((n % (10 * y)) / (1 * y));
     i = i + 1;
-    z = x * 10 ** b + z;
+    z = x * (10 ** b) + z;
     b = b - 1;
-  }
-  console.log(z);
+  } while (b+1 > 0 )
+  if (m >= 0) {
+    console.log(z);
+  } else console.log("-" + z);
 </script>
 
+<script id="ch0105/30" type="0105-30">
+  var i = 0;
+  var m = +prompt("整数");
+  var k = +prompt("含有几个3");
+  var x = m;
+  var z = 0;
+  var b = 0;
+  if (m % 19 == 0) {
+    while (x != 0) {
+      x = parseInt(x / 10);
+      b = b + 1;
+    }
+    do {
+      y = 10 ** i;
+      x = parseInt((m % (10 * y)) / (1 * y));
+      z = (x == 3 ? z = z + 1 : z = z);
+      i = i + 1;
+      b = b - 1;
+    } while (b > 0 )
+    if (z == k) {
+      console.log ("YES")
+    } else console.log ("NO")
+  } else console.log ("NO")
+</script>
 
+<script id="ch0105/31" type="0105-31">
+  var i = 0;
+  var N = +prompt("几盏灯");
+  var M = +prompt("几个人");
+  var n = N - 1;
+  var a = 0;
+  var b = 0;
+  var c = 1;
+  var x = 0;
+  var y = 0;
+  var z = N - 1;
+  var q = 0;
+  while (i < M) {
+    i = i + 1;
+    c = 1;
+    n = N - 1;
+    while (c <= N) {
+      c % i == 0 ? a = 1 : a = 0;
+      b = b + a * 10 ** n;
+      n = n - 1;
+      c = c + 1
+    }
+  }
+  while (z + 1 > 0) {
+    y = 10 ** z;
+    x = parseInt((b % (10 * y)) / (1 * y));
+    z = z - 1;
+    q = q + 1;
+    if (x % 2 != 0) {
+      console.log(q);
+    } else continue;
+  }
+</script>
 
+<script id="ch0105/32" type="0105-32">
+  var n = +prompt("正整数");
+  var a = 0;
+  var b = 1;
+  var c = 1;
+  var d = 0;
+  var q = 0;
+  var w = 0;
+  var e = 1;
+  var r = 0;
+  var i = 0;
+  var x = 0;
+  while (i <  n) {
+    i = i + 1;
+    while (a < i) {
+      d = b + c
+      b = c;
+      c = d;
+      a = a + 1;
+    }
+    while (q < i) {
+      r = w + e;
+      w = e;
+      e = r;
+      q = q + 1;
+    }
+    x = x + d / r;
+  }
+  console.log(x.toFixed(4));
+</script>
 
+<script id="ch0105/33" type="0105-33">
+  var n = +prompt("正整数");
+  var i = 0;
+  var x = 0;
+  while (i < n) {
+    i = i + 1;
+    if (i % 2 != 0) {
+      x = x + 1 / i;
+    } else x = x - 1 / i;
+  }
+  console.log(x.toFixed(4));
+</script>
 
+<script id="ch0105/34" type="0105-34">
+  var n = +prompt("正整数");
+  var i = 0;
+  var x = 0;
+  var y = 0;
+  var a = 0;
+  while (a < n) {
+    a = a + 1;
+    i = 1;
+    x = 1;
+    while (i <= a) {
+      x = x * i;
+      i = i + 1;
+    }
+    y = x + y
+  }
+  console.log(y);
+</script>
+
+<script id="ch0105/35" type="0105-35">
+  var n = +prompt("正整数");
+  var i = 0;
+  var x = 0;
+  var y = 1;
+  var a = 0;
+  while (a < n) {
+    a = a + 1;
+    i = 1;
+    x = 1;
+    while (i <= a) {
+      x = x * i;
+      i = i + 1;
+    }
+    y = 1 / x + y;
+  }
+  console.log(y.toFixed(10));
+</script>
+
+<script id="ch0105/36" type="0105-36">
+  var x = +prompt("正整数");
+  var n = +prompt("幂");
+  var y = 0;
+  while (n >= 0) {
+    y = x ** n + y;
+    n = n - 1;
+  }
+  console.log(y);
+</script>
+
+<script id="ch0105/37" type="0105-37">
+  var M = +prompt("血上限");
+  var m = 0;
+  var N = +prompt("战斗力");
+  var X = +prompt("血药");
+  var n;
+  var a;
+  var b;
+  while (X >= 0) {
+    if (M <= N) {
+      b = Math.floor(M / N);
+      X = X - 1;
+      N = N + b;
+    } else {
+      a = Math.ceil(M / N);
+      b = Math.floor(M / N);
+      X = X - a
+      N = N + b;
+    }
+  }
+  console.log(N);
+</script>
+
+<script id="ch0105/38" type="0105-38">
+
+</script>
+
+<script id="ch0105/39" type="0105-39">
+  var n = +prompt("正整数");
+  var i = 0;
+  var a = 0;
+  var b = 0
+  while (i < n) {
+    i = i + 1;
+    if (i % 7 == 0 || parseInt((i % (10 * 1)) / (1 * 1)) == 7 || parseInt((i % (10 * 10)) / (1 * 10))== 7 || parseInt((i % (10 * 100)) / (1 * 100)) == 7) {
+      a = 0;
+    } else a = i;
+    b = a * a + b;
+  }
+  console.log(b);
+</script>
+
+<script id="ch0105/40" type="0105-40">
+  var n = prompt("正整数");
+  var i = 0;
+  var a;
+  var b = 0;
+  var c;
+  var d;
+  while (i < n) {
+    i = i + 1;
+    c = i + "";
+    a = (c.split(1).length - 1);
+    d = parseInt(a);
+    b = b + d;
+  }
+  console.log(b);
+</script>
+
+<script id="ch0105/41" type="0105-41">
+  var L = +prompt("正整数");
+  var R = +prompt("正整数");
+  var i = L - 1;
+  var a;
+  var b = 0;
+  var c;
+  var d;
+  while (i < R) {
+    i = i + 1;
+    c = i + "";
+    a = (c.split(2).length - 1);
+    d = parseInt(a);
+    b = b + d;
+  }
+  console.log(b);
+</script>
+
+<script id="ch0105/44" type="0105-44">
+  var N = +prompt("正整数");
+  var i = 0;
+  var a = N;
+  var b = 1
+  while (b <= a) {
+    if (N % b != 0) {
+      b = b + 1;
+    } else if ( b == a ) {
+      console.log("1");
+    }
+  }
+</script>
+
+<script id="ch0105/45" type="0105-45">
+  var N = +prompt("正整数");
+  var i = 0;
+
+  var a = N -1;
+  while ()
+</script>
+
+<script id="sort" sample-input="4 1 7" sample-output="1 4 7" comment="输入三个数，把此三个数按升序输出">
+
+</script>
+
+题目：水仙花数。水仙花数是指一个N位的十进制数，其各位数的N次方的和等于它自己。
+如：153 =　1的三次方+5的三次方+3的三次方，则153就是一个水仙花数
+或：1634 =　1的四次方+6的四次方+3的四次方+4的四次方
+因为1634是一个四位数。
+找出100到100000以内所有的水仙花数。
+<script id="narcissistic " sample-input="153" sample-output="YES" comment="判断一个数是否为水仙花数">
+  var a = prompt("正整数");
+  var b = a.length;
+  var c;
+  var x;
+  var y = 0;
+  for (var i = b - 1; i >= 0 ; i--) {
+    c = 10 ** i;
+    x = parseInt((a % (10 * c)) / (1 * c))
+    console.log(x);
+    y = x ** b + y
+    console.log(y);
+  }
+  if (y == a) {
+    console.log("YES");
+  } else console.log("NO");
+
+</script>
+<script id="narcissistics" sample-input="" sample-output="" comment="找出100到10000以内所有的水仙花数">
+  var b;
+  var c;
+  var x;
+  var y = 0;
+  for (j = 100; j <= 10000 ; j++) {
+    y = 0;
+    b = ("" + j).length;
+      for (var i = b - 1; i >= 0 ; i--) {
+      c = 10 ** i;
+      x = parseInt((j % (10 * c)) / (1 * c))
+      y = x ** b + y
+    }
+    if (y == j) {
+      console.log(y);
+    }
+  }
+</script>
+<script id="palindrom" sample-input="12321" sample-output="YES" comment="判断一个非负整数是否为回文数字">
+  var a = prompt("正整数");
+  var b = a.length;
+  var c,d,e,f;
+  var x,y;
+  var q = 0,w = 0;
+  if (b == 1) {
+    console.log("YES");
+  } else {
+    for (i = 0; i < b; i++) {
+      c = i;
+      d = b - 1 - i;
+      e = 10 ** c
+      f = 10 ** d;
+      x = parseInt((a % (10 * e)) / (1 * e));
+      y = parseInt((a % (10 * f)) / (1 * f));
+      if (c == d) {
+        continue;
+      }
+      if (x == y) {
+        q = q + 0;
+      } else {q = q + 1;console.log("NO"); break;}
+    }
+    if (q == 0) {
+      console.log("YES")
+    }
+  }
+
+</script>
+
+<script id="weekday" sample-input="2018 6" sample-output="5" comment="输入年份与月份，给出该年该月的第一天是星期几">
+
+</script>
+<script id="complete-number" sample-input="6" sample-output="YES" comment="判断一个数是否为完全数">
+  var a = +prompt("整数");
+  var b = 0;
+  for (var i = 0; i < a; i++) {
+    if (a % i == 0) {
+      b = b + i;
+    }
+  }
+  if (b == a) {
+    console.log("YES");
+  } else console.log("NO")
+</script>
+<script id="complete-numbers" sample-input="" sample-output="" comment="输出10000以内所有的完全数">
+  for (a = 1; a < 10000; a++) {
+    var b = 0;
+    for (var i = 0; i < a; i++) {
+    if (a % i == 0) {
+      b = b + i;
+    }
+  }
+  if (b == a) {
+    console.log(b);
+  }
+  }
+</script>
+<script id="prime" sample-input="7" sample-output="YES" comment="判断一个数是否为素数">
+  var a = +prompt("正整数");
+  var b = 0;
+  for (var i= 2 ; i < a; i++) {
+    if (a % i != 0) {
+      b = b;
+    } else {
+      b = b + 1;
+      break;
+    }
+  }
+  if (b == 0) {
+    console.log("YES")
+  } else console.log("NO");
+
+</script>
+<script id="primes" sample-input="" sample-output="" comment="输出100以内所有的素数">
+  var a;
+  var b = 0;
+  for (a = 2; a <= 100; a++) {
+    b = 0;
+    for (var i= 2 ; i < a; i++) {
+      if (a % i != 0) {
+        b = b;
+      } else {
+        b = b + 1;
+      }
+    }
+    if (b == 0) {
+      console.log(a)
+    }
+  }
+  
+</script>
+<script id="itob" sample-input="123" sample-output="123" comment="数字转换成字符串，即实现Number函数的功能，不可使用+号或者Number函数">
+  
+</script>
+<script id="lcf&lcm" sample-input="12 9" sample-output="36 3" comment="给定两个数，求它们的最小公倍数和最大公约数">
+  
+</script>
+
+题目：敲7。输出1到100以内所有7的倍数以及数字中包含7的数，如7（7的倍数），37（不是倍数但数位中包含7）都需要输出，依次类推
+<script id="7" sample-input="" sample-output="" comment="敲7，输出7的倍数或数位中含有7的数如（21，27）">
+  var n = +prompt("正整数");
+  var i = 0;
+  var a = 0;
+  var b = 0
+  while (i < n) {
+    i = i + 1;
+    if (i % 7 == 0 || parseInt((i % (10 * 1)) / (1 * 1)) == 7 || parseInt((i % (10 * 10)) / (1 * 10))== 7 || parseInt((i % (10 * 100)) / (1 * 100)) == 7) {
+      a = 0;
+    } else a = i;
+    b = a * a + b;
+  }
+  console.log(b);
+</script>
+<script id="sqrt" sample-input="2" sample-output="1.414" comment="不使用Math.sqrt，求一个非负数的平方根，至少精确到小数点后3位">
+  
+</script>
+
+给定M和N，求从M个物体中选出N个的排列与组合的数量：
+Ｃ（ｍ，ｎ）
+Ａ（ｍ，ｎ）
+<script id="c&a">
+  
+</script>
+
+题目：给定一个数，对其进行四舍五入，如1.4输出1，1.6输出2
+<script id="round">
+  var a = +prompt("整数");
+  var b =Math.round(a);
+  console.log(b);
+</script>
 
 
 
