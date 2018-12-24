@@ -1246,6 +1246,12 @@ console.log(y);
   console.log(b);
 </script>
 
+<script id="ch0105/43" type="0105-43">
+
+
+
+</script>
+
 <script id="ch0105/44" type="0105-44">
   var N = +prompt("正整数");
   var i = 0;
@@ -1262,10 +1268,22 @@ console.log(y);
 
 <script id="ch0105/45" type="0105-45">
   var N = +prompt("正整数");
-  var i = 0;
-
-  var a = N -1;
-  while ()
+  var a = 0;
+  var b = 0;
+  var x = 0;
+    for (var i = 1; i > 0; i++) {
+      for (var j = 1; j <= i; j++) {
+        a = a + i;
+        b = b + 1
+        if (b == N) {
+          break;
+        }
+      }
+      if (b == N) {
+        break;
+      }
+    }
+    console.log(a);
 </script>
 
 <script id="sort" sample-input="4 1 7" sample-output="1 4 7" comment="输入三个数，把此三个数按升序输出">
@@ -1409,6 +1427,27 @@ console.log(y);
   
 </script>
 <script id="lcf&lcm" sample-input="12 9" sample-output="36 3" comment="给定两个数，求它们的最小公倍数和最大公约数">
+  var a = +prompt("整数");
+  var b = +prompt("整数");
+  var c = Math.max(a,b);
+  var d = Math.min(a,b);
+  var j = d;
+  var z = 0;
+  for (i = c; i >= 0; i--) {
+    if (a % i == 0 && b % i == 0) {
+      console.log(i);
+      break;
+    } else continue;
+  }
+  while (j > 0) {
+    z = z + 1;
+    j = z * i;
+    if (j % a == 0 && j % b == 0) {
+      console.log(j);
+      break;
+    }
+  }
+
   
 </script>
 
@@ -1428,7 +1467,17 @@ console.log(y);
   console.log(b);
 </script>
 <script id="sqrt" sample-input="2" sample-output="1.414" comment="不使用Math.sqrt，求一个非负数的平方根，至少精确到小数点后3位">
-  
+  var a = +prompt("整数");
+  var i = 0;
+  var b;
+  while (a > 0) {
+    i = i + 0.001;
+    b = i * i;
+    if ( b >= a) {
+      console.log(i.toFixed(3));
+      break;
+    }
+  }
 </script>
 
 给定M和N，求从M个物体中选出N个的排列与组合的数量：
