@@ -10,8 +10,7 @@ chunk : function(array, size = 1) {
     }
     res.push(ary.slice(s,array.length))
     return res;
-  }
-
+  },
 compact : function(array) {
     res = [];
     for (var i = 0; i < array.length; i++) {
