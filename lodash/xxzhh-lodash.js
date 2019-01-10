@@ -10,7 +10,7 @@ chunk : function(array, size = 1) {
     }
     res.push(ary.slice(s,array.length))
     return res;
-  },
+  }
 
 
 
