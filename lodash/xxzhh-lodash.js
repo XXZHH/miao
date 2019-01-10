@@ -1,5 +1,5 @@
 var xxzhh = {
-  chunk : function(ary, size = 1) {
+chunk : function chunk(ary, size = 1) {
     var res = [];
     var s = 0
     var e = size
@@ -10,5 +10,9 @@ var xxzhh = {
     }
     res.push(ary.slice(s,ary.length))
     return res;
+  }
+
+  compact : function {
+    
   }
 }
