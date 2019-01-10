@@ -170,11 +170,11 @@
 
 <script id="ch0103/13" type="0103-13">
   var n = 100;
-  var g = n % 10
-  var s = (n % 100 - g) / 10;
-  var b = (n - (n % 100)) / 100;
+  var g =  n % 10
+  var s =  (n % 100 - g) / 10;
+  var b =  (n - (n % 100)) / 100;
   var x = g * 100 + s * 10 + b;
-  console.log("g"+"s"+"b");
+  console.log(g,s,b,);
 </script>
 
 <script id="ch0103/14" type="0103-14">
@@ -317,24 +317,16 @@
 </script>
 
 <script id="ch0104/09" type="0104-09">
-  var x = 105;
-  var a;
-  var b;
-  var c;
-  var z = a + b + c
-  if (x % 3 == 0) {
-    a = "3"
-  };
-  if (x % 5 == 0) {
-    b = "5"
-  };
-  if (x % 7 == 0) {
-    c = "7"
-  };
-  if (x % 3 == 0 && x % 5 == 0 && x % 7 == 0) {
-    console.log("n");
-  };
- console.log(z);
+var a = +prompt("整数");
+  if (a % 3 == 0) {
+    console.log(3);
+  }
+  if (a % 5 == 0) {
+    console.log(5); 
+  }
+  if (a % 7 == 0) {
+    console.log(7);
+  }
 </script>
 
 <script id="ch0104/10" type="0104-10">
@@ -443,23 +435,6 @@ console.log(x);
 </script>
 
 <script id="ch0104/19" type="0104-19">
-  var x = 1;
-  var y = 2;
-  var z = "+";
-  var n;
-  if (z == "+") {
-    n = x + y;
-  } else if (z == "-") {
-    n = x - y;
-  } else if (z == "*") {
-    n = x * y;
-  } else if (z == "/") {
-    n = x / y;
-  };
-  console.log(n);
-</script>
-
-<script id="ch0104/20" type="0104-20">
   var x = 1;
   var y = 2;
   var z = "+";
@@ -879,8 +854,11 @@ console.log(x);
       break;
     }
   }
-  b = a * 1.2 + x;
-  console.log(b);
+  if (i == 12) {
+    b = a * 1.2 + x;
+    console.log(b);
+  }
+ 
 </script>
 
 <script id="ch0105/23" type="0105-23">
@@ -920,14 +898,20 @@ console.log(y);
 </script>
 
 <script id="ch0105/25" type="0105-25">
-  var i = 0;
-  var a;
-  var b;
-  while () {
-    a = i.toString(7);
-    b = i.toString(7);
-    i = i + 1;
-  }
+ var i = 49;
+ var a;
+ var b;
+ var x;
+  while (i <= 728) {
+    a = toString(7);
+    b = toString(9);
+    if (a == b) {
+      console.log(i)
+      console.log(a)
+      console.log(b)
+    }
+  i = i + 1;
+ }
 </script>
 
 <script id="ch0105/26" type="0105-26">
@@ -1246,6 +1230,12 @@ console.log(y);
   console.log(b);
 </script>
 
+<script id="ch0105/42" type="0105-42">
+
+
+
+</script>
+
 <script id="ch0105/43" type="0105-43">
 
 
@@ -1494,7 +1484,86 @@ console.log(y);
   console.log(b);
 </script>
 
+<script>
+  var a = +prompt("猴子数")
+  var b = +prompt("第几个退出")
 
+
+</script>
+
+<script id="最小被1-20整除的数">
+  var a = 0
+  while (a>=0) {
+    a += 1;
+    for (var i = 1 ; i < 20; i++) {
+      if (a % i == 0) {
+      } else break;
+    }
+    if (i == 20) {
+      console.log(a);
+      break;
+    }
+  }
+</script>
+
+<script id="输出一位">
+  var n = +prompt("整数");
+  var b = 0;
+  var c = 0;
+  var d;
+  function bit (n) {
+    var i = 0;
+    while (n > 0) {
+      n=Math.floor(n / 10);
+      i = i + 1;
+    }
+    return i;
+  }
+  while(n >= 10) {
+    d = bit(n);
+    c = 0;
+    while(d > 0) {
+      b = n % 10;
+      n = (n - b) / 10;
+      c = c + b
+      d = d - 1;
+    }
+    n = c;
+  }
+  console.log(n)
+</script>
+
+<script>
+  var i = 9;
+  for (x = 1; x <= i; x++) {
+    i = i - 1;
+    for (y = 1; y <= 9; y++){
+      console.log(x + "*" + y + "=" + x*y)
+    }
+  }
+</script>
+
+<script>
+  var x;
+  for (var a = 1; a <= 1000; a++){
+    for (var b = 1; b <= 1000; b++){
+      for (var c = 1; c <= 1000; c++){
+        x = a + b + c;
+        q = a * a;
+        w = b * b;
+        e = c * c;
+        r = q + w;
+        if (x == 1000 && e == r ) {
+          console.log(a,b,c)
+        }
+      }
+    }
+  }
+</script>
+
+<script>
+ 
+  </script>
 
 
 
