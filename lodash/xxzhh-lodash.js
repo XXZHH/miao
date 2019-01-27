@@ -34,7 +34,7 @@ drop: function drop(array, number = 1) {
     return []
   }
   for (let i = 0; i < number; i++) {
-    array.shift()
+    array.shift() 
   }
   return array
 },
@@ -47,6 +47,52 @@ dropRight: function dropRight(array, number = 1) {
     array.pop()
   }
   return array
+},
+
+head: function head(array) {
+  return array[1];
+},
+
+initial: function initial(array) {
+  array.pop();
+  return array;
+},
+
+sortedUniq: function sortedUniq(array) {
+  let res = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] != array[i+1]) {
+      res.push(array[i])
+    }
+  }
+  return res
+},
+
+tail: function tail(array) {
+  array.shift()
+  return array
+},
+
+uniq: function uniq(array) {
+  let res = [];
+  for (let i = 0; i < array.length; i++) {
+    if (res.indexOf(array[i]) == -1) {
+      res.push(array[i])
+    }
+  }
+  return res;
+},
+
+add: function add(augend, addend) {
+  return augend + addend
+},
+
+divide: function divide(dividend, divisor) {
+  return dividend / divisor
+},
+
+max: function max(array) {
+  
 }
 
 
